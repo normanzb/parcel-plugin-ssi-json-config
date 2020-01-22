@@ -15,7 +15,8 @@
   "repository": "https://github.com/normanzb/parcel-plugin-ssi-json-config.git",
   "license": "MIT",
   "files": [
-    "src"
+    "src",
+    "lib"
   ],
   "watch": {
     "build": "src/**/*.js"
