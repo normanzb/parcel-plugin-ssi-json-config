@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-ssi-json-config",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Parcel plugin which generate inserts SSI include command into a script tag inside entry HTML file, and export the included JSON as a module",
   "keywords": [
     "ssi",
