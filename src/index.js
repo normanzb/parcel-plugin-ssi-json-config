@@ -84,6 +84,8 @@ function appendSSIInfos(document, element, ssiInfos) {
   }
 
   stubs.forEach((stub) => {
+    let script = document.createElement('script')
+    script.setAttribute('type','donotrender')
     let ssiStubCommentStart = 
       document.createComment(`# block name="${stub.id}" `)
     let ssiStubText = document.createTextNode(stub.text)
@@ -91,9 +93,10 @@ function appendSSIInfos(document, element, ssiInfos) {
       document.createComment(`# endblock `)
     let br = document.createTextNode('\n')
 
-    element.appendChild(ssiStubCommentStart)
-    element.appendChild(ssiStubText)
-    element.appendChild(ssiStubCommentEnd)
+    script.appendChild(ssiStubCommentStart)
+    script.appendChild(ssiStubText)
+    script.appendChild(ssiStubCommentEnd)
+    element.appendChild(script)
     element.appendChild(br)
   })
 
@@ -104,7 +107,6 @@ function appendSSIInfos(document, element, ssiInfos) {
 
     let ssiComment = 
       document.createComment(`# include file="/${ssi.file}" stub="${ssi.stubId}" `)
-
     let br = document.createTextNode('\n')
 
     script.appendChild(ssiComment)
