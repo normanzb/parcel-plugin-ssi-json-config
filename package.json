@@ -1,0 +1,52 @@
+{
+  "name": "parcel-plugin-ssi-json-config",
+  "version": "0.0.1",
+  "description": "Parcel plugin which generate inserts SSI include command into a script tag inside entry HTML file, and export the included JSON as a module",
+  "keywords": [
+    "ssi",
+    "json",
+    "config",
+    "parcel",
+    "parcel plugin"
+  ],
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "author": "Norman Xu",
+  "repository": "https://github.com/normanzb/parcel-plugin-ssi-json-config.git",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "watch": {
+    "build": "src/**/*.js"
+  },
+  "scripts": {
+    "build": "rm -rf lib && babel src -d lib",
+    "build-watch": "npm-watch build",
+    "lint": "eslint --ext .js ./src"
+  },
+  "peerDependencies": {
+    "parcel-bundler": "^1.9.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "core-js": "^3.6.4",
+    "eslint": "^6.5.1",
+    "eslint-config-normanzb-base": "^1.0.3",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.8",
+    "jsdom": "^16.0.1",
+    "npm-watch": "^0.6.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "uuid": "^3.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}

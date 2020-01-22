@@ -1,0 +1,9 @@
+{
+    "extends": "normanzb-base",
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "rules": {
+    }
+}
