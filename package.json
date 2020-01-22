@@ -29,7 +29,7 @@
     "postversion": "push-current-branch-and-latest-tag"
   },
   "peerDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "parcel": "^1.9.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
@@ -43,7 +43,7 @@
     "jsdom": "^16.0.1",
     "normanzb-build-scripts": "0.0.5",
     "npm-watch": "^0.6.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^1.12.4"
   },
   "dependencies": {
     "uuid": "^3.4.0"

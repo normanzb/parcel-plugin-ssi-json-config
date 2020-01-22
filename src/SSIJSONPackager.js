@@ -1,4 +1,4 @@
-const { Packager } = require('parcel-bundler');
+const { Packager } = require('parcel');
 
 class SvgPackager extends Packager {
   constructor(bundle, bundler) {

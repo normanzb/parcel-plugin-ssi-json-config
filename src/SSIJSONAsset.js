@@ -1,4 +1,4 @@
-import { Asset } from 'parcel-bundler'
+import { Asset } from 'parcel'
 import { GLOBAL_FUNC_GET_SSI_CONFIG } from './consts'
 
 class SSIJSONAsset extends Asset {
