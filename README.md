@@ -2,7 +2,7 @@
 
 This is a Parcel plugin to generate SSI into entry HTML file and retrieve the ssi content as JSON module.
 
-This helps you to easily retrieve json configurations from kubernetes config map, as long as you mount it properly as an json file.
+This helps you to easily retrieve JSON configurations from kubernetes config map, as long as you mount it properly as a JSON file.
 
 See more at [Nginx SSI](http://nginx.org/en/docs/http/ngx_http_ssi_module.html)
 
