@@ -3,7 +3,7 @@ import { GLOBAL_FUNC_GET_SSI_CONFIG } from './consts'
 
 class SSIJSONAsset extends Asset {
   /**
-   * @desc Generate asset of an svg file imported by js bundle
+   * @desc Generate asset imported by js bundle
    *
    * @return generated assets for packagers
    */

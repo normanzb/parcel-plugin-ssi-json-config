@@ -8,7 +8,7 @@ class SvgPackager extends Packager {
 
   /**
    * @desc function run by parcel for each asset of a package
-   * @param {Asset} asset - svg asset
+   * @param {Asset} asset 
    */
   async addAsset(asset) {
     if (!asset.generated.ssijson) {
