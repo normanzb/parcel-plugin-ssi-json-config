@@ -46,6 +46,7 @@
     "parcel": "^1.12.4"
   },
   "dependencies": {
+    "terser": "^4.6.3",
     "uuid": "^3.4.0"
   },
   "husky": {

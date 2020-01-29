@@ -1,4 +1,5 @@
 import { JSDOM } from 'jsdom'
+import terser from "terser"
 import fs from 'fs'
 import util from 'util'
 import generateStubId from './generateStubId'
@@ -56,9 +57,12 @@ function getHeadElementOrCreateOne(document) {
 }
 
 function appendSSIRootScript(document, element) {
+  let code = GLOBAL_FUNC_GET_SSI_CONFIG +
+    '=' + getSSIConfig.toString().replace('__POSTFIX__', POSTFIX)
+  let uglified = terser.minify(code)
+  console.log(code, uglified)
   let script = document.createElement('script')
-  let content = document.createTextNode(GLOBAL_FUNC_GET_SSI_CONFIG +
-    '=' + getSSIConfig.toString().replace('__POSTFIX__', POSTFIX))
+  let content = document.createTextNode(uglified.code)
   script.appendChild(content)
   element.appendChild(script)
 }
