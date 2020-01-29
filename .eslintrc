@@ -4,6 +4,9 @@
       "browser": true,
       "node": true
     },
+    "globals": {
+      "Promise": true
+    },
     "rules": {
     }
 }

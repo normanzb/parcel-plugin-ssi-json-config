@@ -46,3 +46,17 @@ Fields you can use in SSIJSON file
 
 * file: optional, if not provided the module file name will be used, with replaced ".json" extension
 * stub: fallback json content to put into ssi block 
+
+## SSI mocking for local development
+
+This plugin can inject local json file contents into the place where the same ssi json file name is expected.
+
+You can do this by setting environment variable `PARCEL_PLUGIN_SSI_JSON_CONFIG_ENABLE_MOCK` to `true`, this will cause the plugin to seek mock json files inside `ssi-mocks` folder under the directory where parcel was executed.
+
+You can also change the folder path by configuring environment variable `PARCEL_PLUGIN_SSI_JSON_CONFIG_MOCK_PATH`
+
+Example:
+
+```
+PARCEL_PLUGIN_SSI_JSON_CONFIG_ENABLE_MOCK=true PARCEL_PLUGIN_SSI_JSON_CONFIG_MOCK_PATH=ssimocks parcel index.html
+```
