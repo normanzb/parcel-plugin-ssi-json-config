@@ -43,7 +43,7 @@
     "jsdom": "^16.0.1",
     "normanzb-build-scripts": "0.0.5",
     "npm-watch": "^0.6.0",
-    "parcel": "^1.12.4"
+    "parcel": "^2.8.2"
   },
   "dependencies": {
     "terser": "^4.6.3",
